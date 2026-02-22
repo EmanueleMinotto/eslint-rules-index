@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, Suspense } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { Box, Container } from "@mantine/core";
+import { Box, Container, Text, Anchor, Stack } from "@mantine/core";
 import { DataTable } from "mantine-datatable";
 import { RulesIndexHeader } from "@/components/RulesIndexHeader";
 import { RulesTableEmptyState } from "@/components/RulesTableEmptyState";
@@ -334,6 +334,39 @@ function HomePage() {
                     className="rules-table-wrapper"
                 />
             </Container>
+            <Box
+                component="footer"
+                py="xl"
+                mt="xl"
+                style={{
+                    borderTop: "1px solid var(--mantine-color-default-border)",
+                }}
+            >
+                <Container size="xl">
+                    <Stack gap="xs" align="center" ta="center">
+                        <Text size="sm" c="dimmed">
+                            Made with ❤️{" "}
+                            <Anchor
+                                href="https://github.com/EmanueleMinotto/eslint-rules-index"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                inherit
+                            >
+                                on GitHub
+                            </Anchor>
+                            {" by "}
+                            <Anchor
+                                href="https://emanueleminotto.github.io/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                inherit
+                            >
+                                Emanuele Minotto
+                            </Anchor>
+                        </Text>
+                    </Stack>
+                </Container>
+            </Box>
         </Box>
     );
 }
