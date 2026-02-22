@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "@mantine/core/styles.css";
+@import "mantine-datatable/styles.css";
 
 :root {
   --background: #ffffff;
@@ -22,5 +24,65 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--mantine-font-family), Arial, Helvetica, sans-serif;
+}
+
+/* Data table footer and pagination - scoped to rules table wrapper */
+.rules-table-wrapper .mantine-datatable-footer {
+  border-top: 1px solid var(--mantine-color-default-border) !important;
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-lg) !important;
+  background-color: var(--mantine-color-default) !important;
+  border-bottom-left-radius: var(--mantine-radius-sm);
+  border-bottom-right-radius: var(--mantine-radius-sm);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.04);
+}
+
+[data-mantine-color-scheme="dark"] .rules-table-wrapper .mantine-datatable-footer {
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.rules-table-wrapper .mantine-datatable-footer th {
+  border-top: none !important;
+  padding: 0 !important;
+  vertical-align: middle;
+}
+
+.rules-table-wrapper .mantine-datatable-pagination {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mantine-spacing-md);
+  min-height: 2.5rem;
+  padding: 0;
+  width: 100%;
+}
+
+.rules-table-wrapper .mantine-datatable-pagination-text {
+  font-size: var(--mantine-font-size-sm) !important;
+  color: var(--mantine-color-dimmed) !important;
+  flex: 1 1 auto;
+  font-weight: 500;
+}
+
+.rules-table-wrapper .mantine-datatable-pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-xs);
+}
+
+.rules-table-wrapper .mantine-datatable-pagination-pages-control {
+  min-width: 2.25rem !important;
+  height: 2.25rem !important;
+  padding: 0 var(--mantine-spacing-sm) !important;
+  font-size: var(--mantine-font-size-sm) !important;
+  border-radius: var(--mantine-radius-sm) !important;
+  font-weight: 500;
+}
+
+.rules-table-wrapper .mantine-datatable-page-size-selector-button {
+  font-size: var(--mantine-font-size-sm) !important;
+  padding: 0 var(--mantine-spacing-sm) !important;
+  min-height: 2.25rem !important;
+  border-radius: var(--mantine-radius-sm) !important;
 }
