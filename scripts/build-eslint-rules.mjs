@@ -57,10 +57,20 @@ function getPluginPrefix(packageName) {
 const pkgPath = path.join(PROJECT_ROOT, "package.json");
 const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
 const deps = { ...pkg.dependencies, ...pkg.devDependencies };
-const pluginPackages = Object.keys(deps || {}).filter(
-  (name) =>
-    name.startsWith("eslint-plugin-") || /^@[^/]+\/eslint-plugin-.+$/.test(name)
-);
+const pluginPackages = Object.keys(deps || {}).filter((name) => {
+  if (
+    name.startsWith("eslint-plugin-") ||
+    /^@[^/]+\/eslint-plugin-.+$/.test(name)
+  ) {
+    return true;
+  }
+  // Explicitly include scoped plugins that don't follow the eslint-plugin-* naming
+  // but are ESLint plugins discovered via npm search.
+  if (name === "@eslint-performance/plugin-runtime-complexity") {
+    return true;
+  }
+  return false;
+});
 
 // Plugins that throw when loaded (e.g. missing peer deps); add back here if you reinstall them
 const SKIP_PLUGINS = new Set([]);
