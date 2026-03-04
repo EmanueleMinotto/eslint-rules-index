@@ -97,6 +97,7 @@ function HomePage() {
     }, [qFromUrl]);
     const [fixableFilter, setFixableFilter] = useState<string | null>(null);
     const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+    const [packageFilter, setPackageFilter] = useState<string | null>(null);
     const [sortStatus, setSortStatus] = useState<{
         columnAccessor: keyof EslintRule | string;
         direction: SortDirection;
@@ -112,6 +113,19 @@ function HomePage() {
             ...Array.from(set)
                 .sort((a, b) => a.localeCompare(b))
                 .map((c) => ({ value: c, label: c })),
+        ];
+    }, []);
+
+    const packageOptions = useMemo(() => {
+        const set = new Set<string>();
+        rules.forEach((r) => {
+            if (r.package?.trim()) set.add(r.package.trim());
+        });
+        return [
+            { value: "", label: "Any" },
+            ...Array.from(set)
+                .sort((a, b) => a.localeCompare(b))
+                .map((p) => ({ value: p, label: p })),
         ];
     }, []);
 
@@ -132,8 +146,11 @@ function HomePage() {
         if (categoryFilter && categoryFilter !== "") {
             list = list.filter((r) => (r.category ?? null) === categoryFilter);
         }
+        if (packageFilter && packageFilter !== "") {
+            list = list.filter((r) => (r.package ?? null) === packageFilter);
+        }
         return list;
-    }, [search, typeFilter, fixableFilter, categoryFilter]);
+    }, [search, typeFilter, fixableFilter, categoryFilter, packageFilter]);
     const sortedRules = useMemo(
         () =>
             sortRules(
@@ -274,6 +291,24 @@ function HomePage() {
                             title: "Package",
                             sortable: true,
                             width: 180,
+                            filtering: !!packageFilter,
+                            filter: ({ close }) => (
+                                <TableColumnFilter
+                                    options={packageOptions}
+                                    value={packageFilter ?? ""}
+                                    onSelect={(v) => {
+                                        setPackageFilter(v);
+                                        setPage(1);
+                                    }}
+                                    onClear={() => {
+                                        setPackageFilter(null);
+                                        setPage(1);
+                                    }}
+                                    close={close}
+                                    placeholder="Package"
+                                    searchable
+                                />
+                            ),
                         },
                         {
                             accessor: "description",
