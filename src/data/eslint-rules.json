@@ -34,6 +34,17 @@
       "category": "Best Practices"
     },
     {
+      "id": "absolute-imports/only-absolute-imports",
+      "package": "eslint-plugin-absolute-imports",
+      "url": "https://www.npmjs.com/package/eslint-plugin-absolute-imports#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": true,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "accessor-pairs",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/accessor-pairs",
@@ -690,6 +701,50 @@
       "deprecated": false,
       "type": null,
       "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "annotation/format-date",
+      "package": "eslint-plugin-annotation",
+      "url": "https://github.com/ronparkdev/eslint-plugin-annotation/tree/main/documents/format-date.md",
+      "description": "Ensure dates in strings match the specified @format-date annotation",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "annotation/sort",
+      "package": "eslint-plugin-annotation",
+      "url": "https://github.com/ronparkdev/eslint-plugin-annotation/tree/main/documents/annotation.md",
+      "description": "Sort array if annotated as @sort",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "annotation/sort-keys",
+      "package": "eslint-plugin-annotation",
+      "url": "https://github.com/ronparkdev/eslint-plugin-annotation/tree/main/documents/sort-keys.md",
+      "description": "Sort keys in object if annotated as @sort-keys",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "annotation/unique",
+      "package": "eslint-plugin-annotation",
+      "url": "https://github.com/ronparkdev/eslint-plugin-annotation/tree/main/documents/unique.md",
+      "description": "Ensure array values are unique if annotated with @unique",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
       "hasSuggestions": false,
       "category": null
     },
@@ -1431,6 +1486,50 @@
       "category": "Possible Errors"
     },
     {
+      "id": "async-await/space-after-async",
+      "package": "eslint-plugin-async-await",
+      "url": "https://www.npmjs.com/package/eslint-plugin-async-await#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "async-await/space-after-await",
+      "package": "eslint-plugin-async-await",
+      "url": "https://www.npmjs.com/package/eslint-plugin-async-await#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "async-protect/async-await",
+      "package": "eslint-plugin-async-protect",
+      "url": "https://www.npmjs.com/package/eslint-plugin-async-protect#rules",
+      "description": "enforce functions with 'Async' naming convention are awaited",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
+      "id": "async-protect/async-suffix",
+      "package": "eslint-plugin-async-protect",
+      "url": "https://www.npmjs.com/package/eslint-plugin-async-protect#rules",
+      "description": "enforce async function naming ends with 'Async'",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
       "id": "ava/assertion-arguments",
       "package": "eslint-plugin-ava",
       "url": "https://github.com/avajs/eslint-plugin-ava/blob/v15.1.0/docs/rules/assertion-arguments.md",
@@ -1728,6 +1827,193 @@
       "category": null
     },
     {
+      "id": "awscdk/construct-constructor-property",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/construct-constructor-property",
+      "description": "Enforces that constructors of classes extending Construct have the property names 'scope, id' or 'scope, id, props'",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/migrate-disable-comments",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/migrate-disable-comments",
+      "description": "Migrate deprecated 'cdk/' ESLint disable comments to 'awscdk/'",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-construct-in-interface",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-construct-in-interface",
+      "description": "Disallow CDK Construct types in interface properties",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-construct-in-public-property-of-construct",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-construct-in-public-property-of-construct",
+      "description": "Disallow Construct types in public property of Construct",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-construct-stack-suffix",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-construct-stack-suffix",
+      "description": "Effort to avoid using 'Construct' and 'Stack' suffix in construct id.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-import-private",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-import-private",
+      "description": "Cannot import modules from private dir at different levels of the hierarchy.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-mutable-property-of-props-interface",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-mutable-property-of-props-interface",
+      "description": "Disallow mutable properties of Construct Props (interface)",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-mutable-public-property-of-construct",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-mutable-public-property-of-construct",
+      "description": "Disallow mutable public properties of Construct",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-parent-name-construct-id-match",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-parent-name-construct-id-match",
+      "description": "Enforce that construct IDs does not match the parent construct name.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-unused-props",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-unused-props",
+      "description": "Enforces that all properties defined in props type are used within the constructor",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/no-variable-construct-id",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/no-variable-construct-id",
+      "description": "Enforce using literal strings for Construct ID.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/pascal-case-construct-id",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/pascal-case-construct-id",
+      "description": "Enforce PascalCase for Construct ID.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/prefer-grants-property",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/prefer-grants-property",
+      "description": "Prefer using the grants property over grant* methods when available.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/props-name-convention",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/props-name-convention",
+      "description": "Enforce props interface name to follow ${ConstructName}Props format",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/require-jsdoc",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/require-jsdoc",
+      "description": "Require JSDoc comments for interface properties and public properties in Construct classes",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/require-passing-this",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/require-passing-this",
+      "description": "Require passing `this` in a constructor.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "awscdk/require-props-default-doc",
+      "package": "eslint-plugin-awscdk",
+      "url": "https://eslint-plugin-awscdk.dev/rules/require-props-default-doc",
+      "description": "Require @default JSDoc for optional properties in interfaces ending with 'Props'",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "backbone/collection-model",
       "package": "eslint-plugin-backbone",
       "url": "https://www.npmjs.com/package/eslint-plugin-backbone#rules",
@@ -1924,6 +2210,39 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": "Best Practices"
+    },
+    {
+      "id": "bdd/exclude",
+      "package": "eslint-plugin-bdd",
+      "url": "https://www.npmjs.com/package/eslint-plugin-bdd#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "bdd/focus",
+      "package": "eslint-plugin-bdd",
+      "url": "https://www.npmjs.com/package/eslint-plugin-bdd#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "better-exhaustive-deps/exhaustive-deps",
+      "package": "@wogns3623/eslint-plugin-better-exhaustive-deps",
+      "url": "https://github.com/facebook/react/issues/14920",
+      "description": "verifies the list of dependencies for Hooks like useEffect and similar",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": null
     },
     {
       "id": "better-styled-components/sort-declarations-alphabetically",
@@ -2278,6 +2597,39 @@
       "category": "Best Practices"
     },
     {
+      "id": "chakra-ui/props-order",
+      "package": "eslint-plugin-chakra-ui",
+      "url": "https://github.com/yukukotani/eslint-plugin-chakra-ui/blob/main/docs/rules/props-order.md",
+      "description": "Enforce a order of the Chakra component's props.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": null
+    },
+    {
+      "id": "chakra-ui/props-shorthand",
+      "package": "eslint-plugin-chakra-ui",
+      "url": "https://github.com/yukukotani/eslint-plugin-chakra-ui/blob/main/docs/rules/props-shorthand.md",
+      "description": "Enforces the usage of shorthand Chakra component props.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "chakra-ui/require-specific-component",
+      "package": "eslint-plugin-chakra-ui",
+      "url": "https://github.com/yukukotani/eslint-plugin-chakra-ui/blob/main/docs/rules/require-specific-component.md",
+      "description": "Enforces the usage of specific Chakra component.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "check-file/filename-blocklist",
       "package": "eslint-plugin-check-file",
       "url": "https://github.com/dukeluo/eslint-plugin-check-file/blob/main/docs/rules/filename-blocklist.md",
@@ -2341,6 +2693,39 @@
       "type": "suggestion",
       "fixable": null,
       "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "classnames/one-by-one-arguments",
+      "package": "eslint-plugin-classnames",
+      "url": "https://github.com/fsubal/eslint-plugin-classnames/tree/main/docs/rules/one-by-one-arguments.md",
+      "description": "suggest not to include multiple classes in an argument of classNames() or clsx()",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": "Stylistic Issues"
+    },
+    {
+      "id": "classnames/prefer-classnames-function",
+      "package": "eslint-plugin-classnames",
+      "url": "https://github.com/fsubal/eslint-plugin-classnames/tree/main/docs/rules/prefer-classnames-function.md",
+      "description": "suggest using className() or clsx() in JSX className",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": "Stylistic Issues"
+    },
+    {
+      "id": "clean-timer/assign-timer-id",
+      "package": "eslint-plugin-clean-timer",
+      "url": "https://www.npmjs.com/package/eslint-plugin-clean-timer#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": true,
       "category": null
     },
     {
@@ -2630,6 +3015,94 @@
       "category": null
     },
     {
+      "id": "coursera/deprecate-module-property",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "Deprecate the usage of a module property.",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Javascript deprecations"
+    },
+    {
+      "id": "coursera/deprecate-require",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "Deprecate an entire module by specifying the path to the module relative to the project root.",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Javascript deprecations"
+    },
+    {
+      "id": "coursera/no-cross-app-dependencies",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "Discourages imports from one app bundle to another",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "coursera/no-lazy-build-loader",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "Disallow usage of LazyBuild in production.",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "coursera/no-non-app-bundle-to-app-bundle-dependencies",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "Discourages imports from a non-app bundle or lib to an app bundle",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "coursera/no-translated-template-strings",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "disallow allow template strings inside _t translation functions",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "coursera/webdriverio-no-xdescribe",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "xdescribe does not work in webdriverio to blacklist files because webdriverio does not prescan files for tests. when using xdescribe, selenium will still boot up a node in order to try to serve that file which is a waste.",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "webdriverio"
+    },
+    {
+      "id": "coursera/webdriverio-only-single-describe",
+      "package": "eslint-plugin-coursera",
+      "url": "https://www.npmjs.com/package/eslint-plugin-coursera#rules",
+      "description": "Since WebdriverIO parallelization works on a file per file basis, encourage developers to not have multiple describe blocks in the same file. Instead create a new file",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "webdriverio"
+    },
+    {
       "id": "css-modules/no-undef-class",
       "package": "eslint-plugin-css-modules",
       "url": "https://www.npmjs.com/package/eslint-plugin-css-modules#rules",
@@ -2700,6 +3173,17 @@
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/curly",
       "description": "Enforce consistent brace style for all control statements",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "curly-quotes/no-straight-quotes",
+      "package": "eslint-plugin-curly-quotes",
+      "url": "https://www.npmjs.com/package/eslint-plugin-curly-quotes#rules",
+      "description": "Enforce the use of curly quotes",
       "deprecated": false,
       "type": "suggestion",
       "fixable": "code",
@@ -2938,6 +3422,72 @@
       "category": null
     },
     {
+      "id": "destructuring/in-methods-params",
+      "package": "eslint-plugin-destructuring",
+      "url": "https://www.npmjs.com/package/eslint-plugin-destructuring#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "destructuring/in-params",
+      "package": "eslint-plugin-destructuring",
+      "url": "https://www.npmjs.com/package/eslint-plugin-destructuring#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "destructuring/no-rename",
+      "package": "eslint-plugin-destructuring",
+      "url": "https://www.npmjs.com/package/eslint-plugin-destructuring#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "disallow-date/no-new-date",
+      "package": "@miovision/eslint-plugin-disallow-date",
+      "url": "https://www.npmjs.com/package/@miovision/eslint-plugin-disallow-date",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "disallow-date/no-static-date",
+      "package": "@miovision/eslint-plugin-disallow-date",
+      "url": "https://www.npmjs.com/package/@miovision/eslint-plugin-disallow-date",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "disallow-date/no-to-date",
+      "package": "@miovision/eslint-plugin-disallow-date",
+      "url": "https://www.npmjs.com/package/@miovision/eslint-plugin-disallow-date",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "dom/compat",
       "package": "eslint-plugin-dom",
       "url": "https://www.npmjs.com/package/eslint-plugin-dom#rules",
@@ -3022,6 +3572,50 @@
       "deprecated": true,
       "type": "layout",
       "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ember-suave/lines-between-object-properties",
+      "package": "eslint-plugin-ember-suave",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ember-suave#rules",
+      "description": "require or disallow an empty line between object properties",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": "Stylistic Issues"
+    },
+    {
+      "id": "ember-suave/no-const-outside-module-scope",
+      "package": "eslint-plugin-ember-suave",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ember-suave#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ember-suave/no-direct-property-access",
+      "package": "eslint-plugin-ember-suave",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ember-suave#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ember-suave/require-access-in-comments",
+      "package": "eslint-plugin-ember-suave",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ember-suave#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
       "hasSuggestions": false,
       "category": null
     },
@@ -4091,6 +4685,39 @@
       "fixable": "code",
       "hasSuggestions": false,
       "category": "Ember Object"
+    },
+    {
+      "id": "enact/display-name",
+      "package": "eslint-plugin-enact",
+      "url": "https://www.npmjs.com/package/eslint-plugin-enact#rules",
+      "description": "Prevent missing displayName in a React component definition",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "enact/kind-name",
+      "package": "eslint-plugin-enact",
+      "url": "https://www.npmjs.com/package/eslint-plugin-enact#rules",
+      "description": "Prevent missing name string in an Enact component definition",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "enact/no-module-exports-import",
+      "package": "eslint-plugin-enact",
+      "url": "https://www.npmjs.com/package/eslint-plugin-enact#rules",
+      "description": "Disallow module.exports with import statements",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Best Practices"
     },
     {
       "id": "eol-last",
@@ -8471,6 +9098,17 @@
       "category": "Tests"
     },
     {
+      "id": "esm-import/extensions",
+      "package": "eslint-plugin-esm-import",
+      "url": "https://www.npmjs.com/package/eslint-plugin-esm-import#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": true,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "exception-handling/might-throw",
       "package": "eslint-plugin-exception-handling",
       "url": "https://github.com/Akronae/eslint-plugin-exception-handling/tree/main/docs/rules/might-throw.md",
@@ -8511,6 +9149,204 @@
       "deprecated": false,
       "type": "problem",
       "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "export-default/last",
+      "package": "@exodus/eslint-plugin-export-default",
+      "url": "https://www.npmjs.com/package/@exodus/eslint-plugin-export-default",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": true,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "export-default/named",
+      "package": "@exodus/eslint-plugin-export-default",
+      "url": "https://www.npmjs.com/package/@exodus/eslint-plugin-export-default",
+      "description": "Require default exports to be named",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "export-scope/no-imports-outside-export-scope",
+      "package": "eslint-plugin-export-scope",
+      "url": "https://github.com/A-Shleifman/eslint-plugin-export-scope",
+      "description": "Disallows importing scoped exports outside their scope",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fb-flow/flow-enums-default-if-possible",
+      "package": "eslint-plugin-fb-flow",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fb-flow#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fb-flow/no-flow-enums-object-mapping",
+      "package": "eslint-plugin-fb-flow",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fb-flow#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fb-flow/use-exact-by-default-object-type",
+      "package": "eslint-plugin-fb-flow",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fb-flow#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fb-flow/use-flow-enums",
+      "package": "eslint-plugin-fb-flow",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fb-flow#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fb-flow/use-indexed-access-type",
+      "package": "eslint-plugin-fb-flow",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fb-flow#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "feature-sliced/absolute-relative",
+      "package": "@conarti/eslint-plugin-feature-sliced",
+      "url": "https://example.com/rule/absolute-relative",
+      "description": "Checks for absolute and relative paths",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "feature-sliced/layers-slices",
+      "package": "@conarti/eslint-plugin-feature-sliced",
+      "url": "https://example.com/rule/layers-slices",
+      "description": "Checks layer imports",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "feature-sliced/public-api",
+      "package": "@conarti/eslint-plugin-feature-sliced",
+      "url": "https://example.com/rule/public-api",
+      "description": "Check for module imports from public api",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": null
+    },
+    {
+      "id": "fetch/no-$http",
+      "package": "eslint-plugin-fetch",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fetch#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fetch/no-jquery",
+      "package": "eslint-plugin-fetch",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fetch#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "fetch/no-xhr",
+      "package": "eslint-plugin-fetch",
+      "url": "https://www.npmjs.com/package/eslint-plugin-fetch#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "filenames-ts/match-exported",
+      "package": "eslint-plugin-filenames-ts",
+      "url": "https://www.npmjs.com/package/eslint-plugin-filenames-ts#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "filenames-ts/match-exported-class",
+      "package": "eslint-plugin-filenames-ts",
+      "url": "https://www.npmjs.com/package/eslint-plugin-filenames-ts#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "filenames-ts/match-regex",
+      "package": "eslint-plugin-filenames-ts",
+      "url": "https://www.npmjs.com/package/eslint-plugin-filenames-ts#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "filenames-ts/no-index",
+      "package": "eslint-plugin-filenames-ts",
+      "url": "https://www.npmjs.com/package/eslint-plugin-filenames-ts#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
       "hasSuggestions": false,
       "category": null
     },
@@ -9318,6 +10154,17 @@
       "category": null
     },
     {
+      "id": "function-name/starts-with-verb",
+      "package": "eslint-plugin-function-name",
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/function-name-starts-with-verb#todo",
+      "description": "Function or method name should begin with a verb",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Style"
+    },
+    {
       "id": "function-paren-newline",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/function-paren-newline",
@@ -9566,6 +10413,39 @@
       "description": "Enforce `return` statements in getters",
       "deprecated": false,
       "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "gettext/has-translation-msgid",
+      "package": "eslint-plugin-gettext",
+      "url": "https://www.npmjs.com/package/eslint-plugin-gettext#rules",
+      "description": "Should only translate string literal. Variable/Null/Undefined/Number is not allowed",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "gettext/no-variable-string",
+      "package": "eslint-plugin-gettext",
+      "url": "https://www.npmjs.com/package/eslint-plugin-gettext#rules",
+      "description": "Should only translate string literal. Variable/Null/Undefined/Number is not allowed",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "gettext/required-positional-markers-for-multiple-variables",
+      "package": "eslint-plugin-gettext",
+      "url": "https://www.npmjs.com/package/eslint-plugin-gettext#rules",
+      "description": "Required adding sprintf positional markers to the variables if a string contains more than a single marker ",
+      "deprecated": false,
+      "type": null,
       "fixable": null,
       "hasSuggestions": false,
       "category": null
@@ -9857,6 +10737,17 @@
       "category": null
     },
     {
+      "id": "graphql-fake/required-error-directive",
+      "package": "@newmo/eslint-plugin-graphql-fake",
+      "url": "https://www.npmjs.com/package/@newmo/eslint-plugin-graphql-fake",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Operations"
+    },
+    {
       "id": "grouped-accessor-pairs",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/grouped-accessor-pairs",
@@ -9945,6 +10836,17 @@
       "category": null
     },
     {
+      "id": "hbs/check-hbs-template-literals",
+      "package": "eslint-plugin-hbs",
+      "url": "https://www.npmjs.com/package/eslint-plugin-hbs#rules",
+      "description": "If you see some hbs`<h1>handlebars templates</h1>`, pass it through a linter.",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Literal linting"
+    },
+    {
       "id": "hexagonal-architecture/enforce",
       "package": "eslint-plugin-hexagonal-architecture",
       "url": "https://github.com/CodelyTV/eslint-plugin-hexagonal-architecture/blob/main/README.md",
@@ -9954,6 +10856,72 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "i18n/no-chinese-character",
+      "package": "eslint-plugin-i18n",
+      "url": "https://github.com/chejen/eslint-plugin-i18n/blob/master/docs/rules/no-chinese-character.md",
+      "description": "This rule helps to find out where Chinese characters are.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "i18n/no-greek-character",
+      "package": "eslint-plugin-i18n",
+      "url": "https://github.com/chejen/eslint-plugin-i18n/blob/master/docs/rules/no-greek-character.md",
+      "description": "This rule helps to find out where Greek characters are.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "i18n/no-japanese-character",
+      "package": "eslint-plugin-i18n",
+      "url": "https://github.com/chejen/eslint-plugin-i18n/blob/master/docs/rules/no-japanese-character.md",
+      "description": "This rule helps to find out where Japanese characters are.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "i18n/no-korean-character",
+      "package": "eslint-plugin-i18n",
+      "url": "https://github.com/chejen/eslint-plugin-i18n/blob/master/docs/rules/no-korean-character.md",
+      "description": "This rule helps to find out where Korean characters are.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "i18n/no-russian-character",
+      "package": "eslint-plugin-i18n",
+      "url": "https://github.com/chejen/eslint-plugin-i18n/blob/master/docs/rules/no-russian-character.md",
+      "description": "This rule helps to find out where Russian characters are.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "i18n/no-thai-character",
+      "package": "eslint-plugin-i18n",
+      "url": "https://github.com/chejen/eslint-plugin-i18n/blob/master/docs/rules/no-thai-character.md",
+      "description": "This rule helps to find out where Thai characters are.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
     },
     {
       "id": "i18next/no-literal-string",
@@ -10095,6 +11063,50 @@
       "deprecated": true,
       "type": "layout",
       "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "implicit-dependencies/no-implicit",
+      "package": "@fable/eslint-plugin-implicit-dependencies",
+      "url": "https://www.npmjs.com/package/@fable/eslint-plugin-implicit-dependencies",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "import-esm/explicit-extension",
+      "package": "eslint-plugin-import-esm",
+      "url": "https://www.npmjs.com/package/eslint-plugin-import-esm#rules",
+      "description": "Validate if import and export paths have an explicit extension",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "import-typescript/no-relative-import",
+      "package": "eslint-plugin-import-typescript",
+      "url": "https://www.npmjs.com/package/eslint-plugin-import-typescript#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": true,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "import-typescript/no-relative-parent-imports",
+      "package": "eslint-plugin-import-typescript",
+      "url": "https://www.npmjs.com/package/eslint-plugin-import-typescript#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": true,
       "hasSuggestions": false,
       "category": null
     },
@@ -11144,6 +12156,28 @@
       "category": null
     },
     {
+      "id": "index/forbid",
+      "package": "eslint-plugin-index",
+      "url": "https://github.com/artlaman/eslint-plugin-index/blob/v1.1.7/rules/forbid/forbid.md",
+      "description": "Forbid files named index",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Quality"
+    },
+    {
+      "id": "index/only-import-export",
+      "package": "eslint-plugin-index",
+      "url": "https://github.com/artlaman/eslint-plugin-index/blob/v1.1.7/rules/only-import-export/only-import-export.md",
+      "description": "Allow only import and export statements in index files",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Quality"
+    },
+    {
       "id": "init-declarations",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/init-declarations",
@@ -11152,6 +12186,17 @@
       "type": "suggestion",
       "fixable": null,
       "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "istanbul-ignore-preserve/preserve-keyword",
+      "package": "eslint-plugin-istanbul-ignore-preserve",
+      "url": "https://www.npmjs.com/package/eslint-plugin-istanbul-ignore-preserve#rules",
+      "description": "Make sure istanbul ignore hint include a @preserve keyword.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": true,
       "category": null
     },
     {
@@ -12407,6 +13452,17 @@
       "fixable": "code",
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "jira-ticket-todo-comment/jira-ticket-todo-comment",
+      "package": "eslint-plugin-jira-ticket-todo-comment",
+      "url": "https://github.com/bamboechop/eslint-plugin-jira-ticket-todo-comment",
+      "description": "Checks TODO comments and informs about missing Jira ticket mentions",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
     },
     {
       "id": "jsdoc/check-access",
@@ -14389,6 +15445,28 @@
       "category": null
     },
     {
+      "id": "jsx-expressions/strict-logical-expressions",
+      "package": "@jgoz/eslint-plugin-jsx-expressions",
+      "url": "https://github.com/hluisson/eslint-plugin-jsx-expressions/blob/v2.0.2/lib/rules/strict-logical-expressions.md",
+      "description": "Forbid non-boolean falsey values in inline expressions",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "jsx-falsy/no-falsy-and",
+      "package": "eslint-plugin-jsx-falsy",
+      "url": "no-falsy-and",
+      "description": "Prevent boolean expressions from adding unwanted falsy strings/numbers to your JSX",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
       "id": "jsx-quotes",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/jsx-quotes",
@@ -14418,6 +15496,17 @@
       "deprecated": true,
       "type": "layout",
       "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "lean-imports/import",
+      "package": "eslint-plugin-lean-imports",
+      "url": "https://www.npmjs.com/package/eslint-plugin-lean-imports#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
       "hasSuggestions": false,
       "category": null
     },
@@ -14517,6 +15606,17 @@
       "deprecated": true,
       "type": "layout",
       "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "literal-blacklist/literal-blacklist",
+      "package": "eslint-plugin-literal-blacklist",
+      "url": "https://www.npmjs.com/package/eslint-plugin-literal-blacklist#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
       "hasSuggestions": false,
       "category": null
     },
@@ -15551,6 +16651,50 @@
       "deprecated": false,
       "type": "suggestion",
       "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "lube/pretty-imports",
+      "package": "eslint-plugin-lube",
+      "url": "https://github.com/Artxe2/lube-series/blob/master/packages/eslint-plugin-lube/docs/pretty-imports.md",
+      "description": "Enforces proper indentation for import and export statements.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "lube/pretty-jsdoc-casting",
+      "package": "eslint-plugin-lube",
+      "url": "https://github.com/Artxe2/lube-series/blob/master/packages/eslint-plugin-lube/docs/pretty-jsdoc-casting.md",
+      "description": "Enforces additional empty comment when type casting in JSDoc.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "lube/pretty-sequence",
+      "package": "eslint-plugin-lube",
+      "url": "https://github.com/Artxe2/lube-series/blob/master/packages/eslint-plugin-lube/docs/pretty-sequence.md",
+      "description": "Enforces additional empty comment when type casting in JSDoc.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "lube/svelte-naming-convention",
+      "package": "eslint-plugin-lube",
+      "url": "https://github.com/Artxe2/lube-series/blob/master/packages/eslint-plugin-lube/docs/svelte-naming-convention.md",
+      "description": "Enforces snake_case with some symbols for variable declaration.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": "code",
       "hasSuggestions": false,
       "category": null
     },
@@ -17700,6 +18844,50 @@
       "category": null
     },
     {
+      "id": "modules-newlines/export-declaration-newline",
+      "package": "@spence1115/eslint-plugin-modules-newlines",
+      "url": "https://www.npmjs.com/package/@spence1115/eslint-plugin-modules-newlines",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "modules-newlines/import-declaration-newline",
+      "package": "@spence1115/eslint-plugin-modules-newlines",
+      "url": "https://www.npmjs.com/package/@spence1115/eslint-plugin-modules-newlines",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": "whitespace",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "moment-timezone/moment-no-utc",
+      "package": "eslint-plugin-moment-timezone",
+      "url": "https://www.npmjs.com/package/eslint-plugin-moment-timezone#rules",
+      "description": "disallow use of moment.utc()",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
+      "id": "moment-timezone/use-moment-timezone",
+      "package": "eslint-plugin-moment-timezone",
+      "url": "https://www.npmjs.com/package/eslint-plugin-moment-timezone#rules",
+      "description": "enforce moment-timezone usage",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
       "id": "mongodb/check-addtoset-updates",
       "package": "eslint-plugin-mongodb",
       "url": "https://www.npmjs.com/package/eslint-plugin-mongodb#rules",
@@ -17882,6 +19070,611 @@
       "description": null,
       "deprecated": false,
       "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/avoid-Date-timing",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/avoid-Date-timing.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/avoid-removeChild",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/avoid-removeChild.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/balanced-listeners",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/balanced-listeners.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/balanced-observers",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/balanced-observers.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/import-browser-window-globals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/import-browser-window-globals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/import-content-task-globals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/import-content-task-globals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/import-globals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/import-globals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/import-headjs-globals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/import-headjs-globals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/lazy-getter-object-name",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/lazy-getter-object-name.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/mark-test-function-used",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/mark-test-function-used.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-aArgs",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-aArgs.html",
+      "description": null,
+      "deprecated": false,
+      "type": "layout",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-addtask-setup",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-addtask-setup.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-arbitrary-setTimeout",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-arbitrary-setTimeout.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-browser-refs-in-toolkit",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-browser-refs-in-toolkit.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-compare-against-boolean-literals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-compare-against-boolean-literals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-comparison-or-assignment-inside-ok",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-comparison-or-assignment-inside-ok.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-cu-reportError",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-cu-reportError.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-define-cc-etc",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-define-cc-etc.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-more-globals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-more-globals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-redeclare-with-import-autofix",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-redeclare-with-import-autofix.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-throw-cr-literal",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-throw-cr-literal.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-useless-parameters",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-useless-parameters.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-useless-removeEventListener",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-useless-removeEventListener.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/no-useless-run-test",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/no-useless-run-test.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/prefer-boolean-length-check",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/prefer-boolean-length-check.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/prefer-formatValues",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/prefer-formatValues.html",
+      "description": "disallow multiple document.l10n.formatValue calls",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-addtask-only",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-addtask-only.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-eager-module-in-lazy-getter",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-eager-module-in-lazy-getter.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-globalThis-modification",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-globalThis-modification.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-import-system-module-from-non-system",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-import-system-module-from-non-system.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-importGlobalProperties",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-importGlobalProperties.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-lazy-imports-into-globals",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-lazy-imports-into-globals.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-mixing-eager-and-lazy",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-mixing-eager-and-lazy.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-multiple-await",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-multiple-await.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-multiple-getters-calls",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-multiple-getters-calls.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-relative-requires",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-relative-requires.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-scriptableunicodeconverter",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-scriptableunicodeconverter.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-some-requires",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-some-requires.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/reject-top-level-await",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-top-level-await.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/rejects-requires-await",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/reject-requires-await.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-cc-etc",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-cc-etc.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-chromeutils-generateqi",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-chromeutils-generateqi.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-console-createInstance",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-console-createInstance.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-default-preference-values",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-default-preference-values.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-includes-instead-of-indexOf",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-includes-instead-of-indexOf.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-isInstance",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-isInstance.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-ownerGlobal",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-ownerGlobal.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-returnValue",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-returnValue.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-services",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-services.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/use-static-import",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/use-static-import.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/valid-ci-uses",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/valid-ci-uses.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/valid-lazy",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/valid-lazy.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/valid-services",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/valid-services.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/valid-services-property",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/valid-services-property.html",
+      "description": null,
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "mozilla/var-only-at-top-level",
+      "package": "eslint-plugin-mozilla",
+      "url": "https://firefox-source-docs.mozilla.org/code-quality/lint/linters/eslint-plugin-mozilla/rules/var-only-at-top-level.html",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
       "fixable": null,
       "hasSuggestions": false,
       "category": null
@@ -18470,6 +20263,17 @@
       "category": null
     },
     {
+      "id": "ng-module-sort/decorator-array-items",
+      "package": "eslint-plugin-ng-module-sort",
+      "url": "https://github.com/ducktordanny/eslint-plugin-ng-module-sort#decorator-array-items",
+      "description": "Checks if the Angular or NestJS module related metadata has ordered arrays, and provide an autofix to sort them.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "no-alert",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/no-alert",
@@ -18509,6 +20313,17 @@
       "description": "Disallow using an async function as a Promise executor",
       "deprecated": false,
       "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "no-async-without-await/no-async-without-await",
+      "package": "eslint-plugin-no-async-without-await",
+      "url": "https://www.npmjs.com/package/eslint-plugin-no-async-without-await#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
       "fixable": null,
       "hasSuggestions": false,
       "category": null
@@ -18589,6 +20404,17 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "no-commented-code/no-commented-code",
+      "package": "eslint-plugin-no-commented-code",
+      "url": "https://www.npmjs.com/package/eslint-plugin-no-commented-code#rules",
+      "description": "Disallow commented-out code",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
     },
     {
       "id": "no-comments/disallowComments",
@@ -19031,6 +20857,17 @@
       "category": null
     },
     {
+      "id": "no-function-declare-after-return/no-function-declare-after-return",
+      "package": "eslint-plugin-no-function-declare-after-return",
+      "url": "https://www.npmjs.com/package/eslint-plugin-no-function-declare-after-return#rules",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "no-global-assign",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/no-global-assign",
@@ -19040,6 +20877,17 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "no-http/no-http",
+      "package": "eslint-plugin-no-http",
+      "url": "https://www.npmjs.com/package/eslint-plugin-no-http#rules",
+      "description": "no http link",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Fill me in"
     },
     {
       "id": "no-implicit-coercion",
@@ -20714,6 +22562,17 @@
       "category": null
     },
     {
+      "id": "no-react-component-snapshots/no-react-component-snapshots",
+      "package": "eslint-plugin-no-react-component-snapshots",
+      "url": "https://www.npmjs.com/package/eslint-plugin-no-react-component-snapshots#rules",
+      "description": "Disallows the use of React component snapshots.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
       "id": "no-redeclare",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/no-redeclare",
@@ -21479,6 +23338,303 @@
       "description": "Require or disallow method and property shorthand syntax for object literals",
       "deprecated": false,
       "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/commands/no-command-in-command-id",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/commands/no-command-in-command-id.md",
+      "description": "Disallow using the word 'command' in a command ID.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/commands/no-command-in-command-name",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/commands/no-command-in-command-name.md",
+      "description": "Disallow using the word 'command' in a command name.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/commands/no-default-hotkeys",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/commands/no-default-hotkey.md",
+      "description": "Discourage providing default hotkeys for commands.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/commands/no-plugin-id-in-command-id",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/commands/no-plugin-id-in-command-id.md",
+      "description": "Disallow including the plugin ID in a command ID.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/commands/no-plugin-name-in-command-name",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/commands/no-plugin-name-in-command-name.md",
+      "description": "Disallow including the plugin name in a command name.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/detach-leaves",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/detach-leaves.md",
+      "description": "Don't detach leaves in onunload.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/hardcoded-config-path",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/hardcoded-config-path.md",
+      "description": "test",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/no-forbidden-elements",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-forbidden-elements.md",
+      "description": "Disallow attachment of forbidden elements to the DOM in Obsidian plugins.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/no-plugin-as-component",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-plugin-as-component.md",
+      "description": "Disallow anti-patterns when passing a component to MarkdownRenderer.render to prevent memory leaks.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/no-sample-code",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-sample-code.md",
+      "description": "Disallow sample code snippets from the Obsidian plugin template.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/no-static-styles-assignment",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-static-styles-assignment.md",
+      "description": "Disallow setting styles directly on DOM elements, favoring CSS classes instead.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/no-tfile-tfolder-cast",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-tfile-tfolder-cast.md",
+      "description": "Disallow type casting to TFile or TFolder, suggesting instanceof checks instead.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/no-view-references-in-plugin",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-view-references-in-plugin.md",
+      "description": "Disallow storing references to custom views directly in the plugin, which can cause memory leaks.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/object-assign",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/object-assign.md",
+      "description": "Discourage using `Object.assign` with two arguments",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/platform",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/platform.md",
+      "description": "Disallow use of navigator API for OS detection",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/prefer-abstract-input-suggest",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/no-deprecated-text-input-suggest.md",
+      "description": "Disallow Liam's frequently copied `TextInputSuggest` implementation in favor of the built-in `AbstractInputSuggest`.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/prefer-file-manager-trash-file",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/prefer-file-manager-trash-file.md",
+      "description": "Prefer FileManager.trashFile() over Vault.trash() or Vault.delete() to respect user settings.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/regex-lookbehind",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/regex-lookbehind.md",
+      "description": "Using lookbehinds in Regex is not supported in some iOS versions",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/sample-names",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/sample-names.md",
+      "description": "Rename sample plugin class names",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/settings-tab/no-manual-html-headings",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/settings-tab/no-manual-html-headings.md",
+      "description": "Disallow using HTML heading elements for settings headings.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/settings-tab/no-problematic-settings-headings",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/settings-tab/no-problematic-settings-headings.md",
+      "description": "Discourage anti-patterns in settings headings.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/ui/sentence-case",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/ui/sentence-case.md",
+      "description": "Enforce sentence case for UI strings",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/ui/sentence-case-json",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/ui/sentence-case-json.md",
+      "description": "Enforce sentence case for English JSON locale strings",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/ui/sentence-case-locale-module",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/ui/sentence-case-locale-module.md",
+      "description": "Enforce sentence case for English TS/JS locale module strings",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/validate-license",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/validate-license.md",
+      "description": "Validate the structure of copyright notices in LICENSE files for Obsidian plugins.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/validate-manifest",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/validate-manifest.md",
+      "description": "Validate the structure of manifest.json for Obsidian plugins.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "obsidianmd/vault/iterate",
+      "package": "eslint-plugin-obsidianmd",
+      "url": "https://github.com/obsidianmd/eslint-plugin/blob/master/docs/rules/vault/vault-iterate.md",
+      "description": "Avoid iterating all files to find a file by its path\n",
+      "deprecated": false,
+      "type": "problem",
       "fixable": "code",
       "hasSuggestions": false,
       "category": null
@@ -22859,6 +25015,292 @@
       "category": null
     },
     {
+      "id": "power-apps/avoid-2011-api",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-2011-api",
+      "description": "Do not use the deprecated Microsoft Dynamics CRM 2011 object model",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/avoid-browser-specific-api",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-browser-specific-api",
+      "description": "Avoid using Internet Explorer legacy APIs or browser plug-ins",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/avoid-crm2011-service-odata",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-crm2011-service-odata",
+      "description": "Do not target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/avoid-crm2011-service-soap",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-crm2011-service-soap",
+      "description": "Do not target the Microsoft Dynamics CRM 2011 SOAP services",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/avoid-dom-form",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-dom-form",
+      "description": "Do not directly access the HTML Document Object Model (DOM) on application pages or forms",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "error"
+    },
+    {
+      "id": "power-apps/avoid-dom-form-event",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-dom-form-event",
+      "description": "Do not directly handle HTML Document Object Model (DOM) events on application pages or forms",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "error"
+    },
+    {
+      "id": "power-apps/avoid-isactivitytype",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-isActivityType",
+      "description": "Prefer avoiding usage of Xrm.Utility.isActivityType",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/avoid-jquery211-library",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/en-us/power-platform/important-changes-coming#jquery-211-to-be-removed-in-model-driven-apps",
+      "description": "jQuery 2.1.1 to be removed in model-driven apps",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/avoid-loadtheme",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-loadtheme",
+      "description": "Avoid using loadTheme method from Fluent v8",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Supportability"
+    },
+    {
+      "id": "power-apps/avoid-modals",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-modals",
+      "description": "Use the Client API functions for Dialogs",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Supportability"
+    },
+    {
+      "id": "power-apps/avoid-ui-refreshribbon",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-ui-refreshribbon",
+      "description": "Do not use ui.refreshRibbon during evaluation of ribbon rules. This triggers duplicated network calls from ribbon and degrades performance. Use promises and asynchronous patterns.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Performance"
+    },
+    {
+      "id": "power-apps/avoid-unpub-api",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-unpub-api",
+      "description": "Do not use unpublished object model members or components",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "error"
+    },
+    {
+      "id": "power-apps/avoid-window-top",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/avoid-window-top",
+      "description": "Avoid using window.top",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Supportability"
+    },
+    {
+      "id": "power-apps/do-not-make-parent-assumption",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/do-not-make-parent-assumption",
+      "description": "Do not assume that the parent window is the entity form",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Design"
+    },
+    {
+      "id": "power-apps/use-appsidepane-api",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-app-appsidepane",
+      "description": "Use the AppSidePane APIs",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/use-async",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-async",
+      "description": "Interact with HTTP and HTTPS resources asynchronously",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "error"
+    },
+    {
+      "id": "power-apps/use-cached-webresource",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-cached-webresource",
+      "description": "Web resource URL is invalid",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Performance"
+    },
+    {
+      "id": "power-apps/use-client-context",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-client-context",
+      "description": "Use client contexts",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/use-getsecurityroleprivilegesinfo",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo",
+      "description": "Consider using the Xrm.Utility.getGlobalContext().userSettings.getSecurityRolePrivilegesInfo() API when working with security role privileges in JavaScript.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Performance"
+    },
+    {
+      "id": "power-apps/use-global-context",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-global-context",
+      "description": "Use global context",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/use-grid-api",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-grid-api",
+      "description": "Use the grid APIs",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/use-navigation-api",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-navigation-api",
+      "description": "Use the navigation APIs",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/use-offline",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-offline",
+      "description": "Use WebApi offline",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": "Upgrade Readines"
+    },
+    {
+      "id": "power-apps/use-org-setting",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-org-setting",
+      "description": "Use org settings",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Upgrade Readiness"
+    },
+    {
+      "id": "power-apps/use-relative-uri",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-relative-uri",
+      "description": "Do not use an absolute path for Dataverse endpoint URLs",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": "Performance"
+    },
+    {
+      "id": "power-apps/use-utility-dialogs",
+      "package": "@microsoft/eslint-plugin-power-apps",
+      "url": "https://learn.microsoft.com/power-apps/maker/data-platform/powerapps-checker/rules/web/use-utility-dialogs",
+      "description": "Use Web API dialogs in form and ribbon commands",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "warning"
+    },
+    {
       "id": "prefer-arrow-callback",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/prefer-arrow-callback",
@@ -22914,6 +25356,17 @@
       "category": null
     },
     {
+      "id": "prefer-import/prefer-import-over-require",
+      "package": "eslint-plugin-prefer-import",
+      "url": "https://www.npmjs.com/package/eslint-plugin-prefer-import#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "prefer-named-capture-group",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/prefer-named-capture-group",
@@ -22956,6 +25409,17 @@
       "fixable": "code",
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "prefer-optional-chaining/prefer-optional-chaining",
+      "package": "eslint-plugin-prefer-optional-chaining",
+      "url": "https://www.npmjs.com/package/eslint-plugin-prefer-optional-chaining#rules",
+      "description": "Prefer optional chaining over a sequence of validations",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "suggestion"
     },
     {
       "id": "prefer-promise-reject-errors",
@@ -23002,6 +25466,17 @@
       "category": null
     },
     {
+      "id": "prefer-smart-quotes/prefer",
+      "package": "eslint-plugin-prefer-smart-quotes",
+      "url": "https://www.npmjs.com/package/eslint-plugin-prefer-smart-quotes#rules",
+      "description": "Prefer the use of curly quote/apostrophe characters",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Stylistic Issues"
+    },
+    {
       "id": "prefer-spread",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/prefer-spread",
@@ -23020,6 +25495,17 @@
       "deprecated": false,
       "type": "suggestion",
       "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "prefer-types/prefer-types",
+      "package": "@inficen/eslint-plugin-prefer-types",
+      "url": "https://github.com/inficen/eslint-plugin-prefer-types/blob/main/docs/rules/prefer-types.md",
+      "description": "prefer types over interface",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
       "hasSuggestions": false,
       "category": null
     },
@@ -23231,6 +25717,105 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "quasar/check-valid-props",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "check-valid-props is **deprecated**, use no-invalid-props instead",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "deprecated"
+    },
+    {
+      "id": "quasar/no-invalid-props",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "Checks correct usage of component properties",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "current"
+    },
+    {
+      "id": "quasar/no-invalid-qfield-usage",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "QField should not be used to wrap QInput, QSelect or QFile",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "current"
+    },
+    {
+      "id": "quasar/no-legacy-components",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "disallow use of legacy components that have been removed from Quasar v1.x",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "legacy"
+    },
+    {
+      "id": "quasar/no-legacy-css",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "disallow use of legacy css classes that have been removed from Quasar v1.x",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "legacy"
+    },
+    {
+      "id": "quasar/no-legacy-directives",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "disallow use of legacy directives that have been removed from Quasar v1.x",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "legacy"
+    },
+    {
+      "id": "quasar/no-legacy-other",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "disallow use of legacy other that have been removed from Quasar v1.x",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
+      "id": "quasar/no-legacy-plugins",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "disallow use of legacy plugins that have been removed from Quasar v1.x",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
+      "id": "quasar/no-legacy-properties",
+      "package": "eslint-plugin-quasar",
+      "url": "https://www.npmjs.com/package/eslint-plugin-quasar#rules",
+      "description": "disallow use of legacy properties that have changed or been removed from Quasar v1.x",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "legacy"
     },
     {
       "id": "qunit/assert-args",
@@ -24245,6 +26830,61 @@
       "category": null
     },
     {
+      "id": "react-filenames/filename-matches-component",
+      "package": "eslint-plugin-react-filenames",
+      "url": "https://www.npmjs.com/package/eslint-plugin-react-filenames#rules",
+      "description": "Enforce naming patterns",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "react-func/max-combined-conditions",
+      "package": "eslint-plugin-react-func",
+      "url": "https://npm",
+      "description": "disallow combined expressions in conditions",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
+      "id": "react-func/max-lines-per-function",
+      "package": "eslint-plugin-react-func",
+      "url": "https://eslint.org/docs/rules/max-lines-per-function",
+      "description": "enforce a maximum number of line of code in a function",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Stylistic Issues"
+    },
+    {
+      "id": "react-hooks-configurable/exhaustive-deps",
+      "package": "eslint-plugin-react-hooks-configurable",
+      "url": "https://github.com/facebook/react/issues/14920",
+      "description": "verifies the list of dependencies for Hooks like useEffect and similar",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": true,
+      "category": null
+    },
+    {
+      "id": "react-hooks-configurable/rules-of-hooks",
+      "package": "eslint-plugin-react-hooks-configurable",
+      "url": "https://reactjs.org/docs/hooks-rules.html",
+      "description": "enforces the Rules of Hooks",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "react-hooks-extra/no-direct-set-state-in-use-effect",
       "package": "eslint-plugin-react-hooks-extra",
       "url": "https://eslint-react.xyz/docs/rules/hooks-extra-no-direct-set-state-in-use-effect",
@@ -24573,6 +27213,28 @@
       "fixable": "code",
       "hasSuggestions": true,
       "category": null
+    },
+    {
+      "id": "react-i18n/no-dynamic-translation-keys",
+      "package": "eslint-plugin-react-i18n",
+      "url": "https://www.npmjs.com/package/eslint-plugin-react-i18n#rules",
+      "description": "Enforce using static strings as keys for translation functions",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "react-i18n/no-missing-interpolation-keys",
+      "package": "eslint-plugin-react-i18n",
+      "url": "https://www.npmjs.com/package/eslint-plugin-react-i18n#rules",
+      "description": "Enforce passing all defined interpolation keys to translation functions",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible errors"
     },
     {
       "id": "react-naming-convention/component-name",
@@ -25068,6 +27730,50 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "react-security/no-dangerously-set-innerhtml",
+      "package": "eslint-plugin-react-security",
+      "url": "https://github.com/snyk-labs/eslint-plugin-react-security/tree/master/docs/rules/no-dangerously-set-innerhtml.md",
+      "description": "Detect usage of dangerouslySetInnerHTML prop.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Security"
+    },
+    {
+      "id": "react-security/no-find-dom-node",
+      "package": "eslint-plugin-react-security",
+      "url": "https://github.com/snyk-labs/eslint-plugin-react-security/tree/master/docs/rules/no-find-dom-node.md",
+      "description": "Detect usage of ReactDOM.findDOMNode().",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Security"
+    },
+    {
+      "id": "react-security/no-javascript-urls",
+      "package": "eslint-plugin-react-security",
+      "url": "https://github.com/snyk-labs/eslint-plugin-react-security/tree/master/docs/rules/no-javascript-urls.md",
+      "description": "Detect usage of javascript: urls in JSX.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Security"
+    },
+    {
+      "id": "react-security/no-refs",
+      "package": "eslint-plugin-react-security",
+      "url": "https://github.com/snyk-labs/eslint-plugin-react-security/tree/master/docs/rules/no-refs.md",
+      "description": "Detect usage of ref prop.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Security"
     },
     {
       "id": "react-web-api/no-leaked-event-listener",
@@ -28260,6 +30966,94 @@
       "category": null
     },
     {
+      "id": "safe-kysely/enforce-where-clause",
+      "package": "eslint-plugin-safe-kysely",
+      "url": "https://www.npmjs.com/package/eslint-plugin-safe-kysely#rules",
+      "description": "Ensures that any call chain which affects a table also includes a 'where' clause.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sdk-app-plugin/file-extension-in-import",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "https://github.com/eslint-community/eslint-plugin-n/blob/HEAD/docs/rules/file-extension-in-import.md",
+      "description": "enforce the style of file extensions in `import` declarations",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sdk-app-plugin/no-async-functions",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "http://eslint-community.github.io/eslint-plugin-es-x/rules/no-async-functions.html",
+      "description": "disallow async function declarations.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "ES2017"
+    },
+    {
+      "id": "sdk-app-plugin/no-dynamic-import",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "http://eslint-community.github.io/eslint-plugin-es-x/rules/no-dynamic-import.html",
+      "description": "disallow `import()` syntax",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "ES2020"
+    },
+    {
+      "id": "sdk-app-plugin/no-promise",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "https://www.npmjs.com/package/@servicenow/eslint-plugin-sdk-app-plugin",
+      "description": "disallow the `Promise` class.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "ES2015"
+    },
+    {
+      "id": "sdk-app-plugin/no-regexp-lookbehind-assertions",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "http://eslint-community.github.io/eslint-plugin-es-x/rules/no-regexp-lookbehind-assertions.html",
+      "description": "disallow RegExp lookbehind assertions.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "ES2018"
+    },
+    {
+      "id": "sdk-app-plugin/no-regexp-unicode-property-escapes",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "http://eslint-community.github.io/eslint-plugin-es-x/rules/no-regexp-unicode-property-escapes.html",
+      "description": "disallow RegExp Unicode property escape sequences.",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "ES2018"
+    },
+    {
+      "id": "sdk-app-plugin/no-unsupported-node-builtins",
+      "package": "@servicenow/eslint-plugin-sdk-app-plugin",
+      "url": "https://www.npmjs.com/package/@servicenow/eslint-plugin-sdk-app-plugin",
+      "description": "disallow unsupported Node.js built-in APIs",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "sdl/no-angular-bypass-sanitizer",
       "package": "@microsoft/eslint-plugin-sdl",
       "url": "https://github.com/microsoft/eslint-plugin-sdl/blob/master/docs/rules/no-angular-bypass-sanitizer.md",
@@ -28632,6 +31426,39 @@
       "fixable": "whitespace",
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "sentry/no-digits-in-tn",
+      "package": "eslint-plugin-sentry",
+      "url": "https://www.npmjs.com/package/eslint-plugin-sentry#rules",
+      "description": "disallow using %d within tn()",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "sentry/no-dynamic-translations",
+      "package": "eslint-plugin-sentry",
+      "url": "https://www.npmjs.com/package/eslint-plugin-sentry#rules",
+      "description": "disallow using non string literals in t(), tn(), and tct()",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "sentry/no-styled-shortcut",
+      "package": "eslint-plugin-sentry",
+      "url": "https://www.npmjs.com/package/eslint-plugin-sentry#rules",
+      "description": "disallow styled shorthand",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Best Practices"
     },
     {
       "id": "signature-design/max-duplicate-param-types",
@@ -31879,6 +34706,17 @@
       "category": "Stylistic Issues"
     },
     {
+      "id": "sort-requires/sort-requires",
+      "package": "eslint-plugin-sort-requires",
+      "url": "https://www.npmjs.com/package/eslint-plugin-sort-requires#rules",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "sort-vars",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/sort-vars",
@@ -32380,6 +35218,127 @@
       "description": "Enforce `tabIndex` value is not greater than zero.",
       "deprecated": false,
       "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "styled-components-varname/varname",
+      "package": "eslint-plugin-styled-components-varname",
+      "url": "https://github.com/macinjoke/eslint-plugin-styled-components-varname",
+      "description": "set a rule of styled-components variable name",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Stylistic Issues"
+    },
+    {
+      "id": "sui/commonjs",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Ensure that your code is using ems over commonjs modules",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/decorator-async-inline-error",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Ensure that at least all your UseCases, Services and Repositories are using @AsyncInlineError decorator from sui",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/decorator-deprecated",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Ensure that @Deprecated() decorator is used as expected",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/decorator-deprecated-remark-method",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Ensure that method using @Deprecated() displays a warning alert",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/decorator-inline-error",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Ensure the right usage of @AsyncInlineError decorator from sui in sui-domain",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/decorators",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Ensure that at least all your UseCases are using the @tracer decorator from sui",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/default-component-test",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Detect when component test file only contains default test cases",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/factory-pattern",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "ensure to define at least one factory function",
+      "deprecated": false,
+      "type": "warning",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/layers-arch",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "Make sure to avoid direct file imports from other packages within your monorepo",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "sui/serialize-deserialize",
+      "package": "eslint-plugin-sui",
+      "url": "https://github.mpi-internal.com/scmspain/es-td-agreements/blob/master/30-Frontend/00-agreements",
+      "description": "ensure entity create - toJSON",
+      "deprecated": false,
+      "type": "suggestion",
       "fixable": null,
       "hasSuggestions": false,
       "category": null
@@ -33296,6 +36255,50 @@
       "fixable": null,
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "tapestry/design-tokens",
+      "package": "@planningcenter/eslint-plugin-tapestry",
+      "url": "https://github.com/planningcenter/eslint-plugin-tapestry/blob/main/rules/design-tokens/README.md",
+      "description": "Validate that tokens passed to token() and computedToken() are valid design tokens",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": null
+    },
+    {
+      "id": "tapestry/no-deprecated-tokens",
+      "package": "@planningcenter/eslint-plugin-tapestry",
+      "url": "https://github.com/planningcenter/eslint-plugin-tapestry/blob/main/rules/no-deprecated-tokens/README.md",
+      "description": "Disallow usage of deprecated design tokens",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "tapestry/no-interactive-label",
+      "package": "@planningcenter/eslint-plugin-tapestry",
+      "url": "https://github.com/planningcenter/eslint-plugin-tapestry/blob/main/rules/no-interactive-label/README.md",
+      "description": "Ensure Tapestry form control components label props do not contain interactive elements",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Accessibility"
+    },
+    {
+      "id": "tapestry/valid-href",
+      "package": "@planningcenter/eslint-plugin-tapestry",
+      "url": "https://github.com/planningcenter/eslint-plugin-tapestry/blob/main/rules/valid-href/README.md",
+      "description": "Ensure BaseLink, Link, IconLink components have valid href values",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Accessibility"
     },
     {
       "id": "template-curly-spacing",
@@ -34409,6 +37412,28 @@
       "category": null
     },
     {
+      "id": "try-catch-failsafe/json-parse",
+      "package": "eslint-plugin-try-catch-failsafe",
+      "url": "https://www.npmjs.com/package/eslint-plugin-try-catch-failsafe#rules",
+      "description": "Use try-catch to wrap JSON.parse",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "try-catch-failsafe/new-url",
+      "package": "eslint-plugin-try-catch-failsafe",
+      "url": "https://www.npmjs.com/package/eslint-plugin-try-catch-failsafe#rules",
+      "description": "Use try-catch to wrap new URL()",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "type-graphql/invalid-decorated-type",
       "package": "eslint-plugin-type-graphql",
       "url": "https://github.com/borremosch/eslint-plugin-type-graphql/blob/v1.0.0/docs/rules/wrong-decorator-signature.md",
@@ -34508,6 +37533,50 @@
       "category": null
     },
     {
+      "id": "typescript-paths/absolute-export",
+      "package": "eslint-plugin-typescript-paths",
+      "url": "https://www.npmjs.com/package/eslint-plugin-typescript-paths#rules",
+      "description": "Controls whether the export can be absolute if the source is in the same directory or below.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "typescript-paths/absolute-import",
+      "package": "eslint-plugin-typescript-paths",
+      "url": "https://www.npmjs.com/package/eslint-plugin-typescript-paths#rules",
+      "description": "Controls whether the import can be absolute if the source is in the same directory or below.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "typescript-paths/absolute-parent-export",
+      "package": "eslint-plugin-typescript-paths",
+      "url": "https://www.npmjs.com/package/eslint-plugin-typescript-paths#rules",
+      "description": "Encourages the use of absolute exports from parent directories.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "typescript-paths/absolute-parent-import",
+      "package": "eslint-plugin-typescript-paths",
+      "url": "https://www.npmjs.com/package/eslint-plugin-typescript-paths#rules",
+      "description": "Encourages the use of absolute imports from parent directories.",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "typescript-sort-keys/interface",
       "package": "eslint-plugin-typescript-sort-keys",
       "url": "https://github.com/infctr/eslint-plugin-typescript-sort-keys/blob/master/docs/rules/interface.md",
@@ -34528,6 +37597,259 @@
       "fixable": "code",
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "ui-testing/missing-assertion-in-test",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/missing-assertion-in-test.md",
+      "description": "Disallow tests without assertions",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-absolute-url",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-absolute-url.md",
+      "description": "Disallow absolute url",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-assertions-in-hooks",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-assertions-in-hooks.md",
+      "description": "Disallow assertions in hooks",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-browser-commands-in-tests",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-browser-commands-in-tests.md",
+      "description": "Disallow browser/page commands in tests",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-css-page-layout-selector",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-css-page-layout-selector.md",
+      "description": "Disallow css selector tied to page layout",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-disabled-tests",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-disabled-tests.md",
+      "description": "Disallow disabled tests",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-focused-tests",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-focused-tests.md",
+      "description": "Disallow focused tests",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-hard-wait",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-hard-wait.md",
+      "description": "Disallow hard wait",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-implicit-wait",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-implicit-wait.md",
+      "description": "Disallow implicit wait",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-link-text-selector",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-link-text-selector.md",
+      "description": "Disallow link text selector",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-tag-name-selector",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-tag-name-selector.md",
+      "description": "Disallow tag name selector",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-wait-in-tests",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-wait-in-tests.md",
+      "description": "Disallow wait in tests",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-xpath-page-layout-selector",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-xpath-page-layout-selector.md",
+      "description": "Disallow xpath selector tied to page layout",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui-testing/no-xpath-selector",
+      "package": "eslint-plugin-ui-testing",
+      "url": "https://github.com/kwoding/eslint-plugin-ui-testing/tree/master/docs/rules/no-xpath-selector.md",
+      "description": "Disallow xpath selector",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui5-jsdocs/check-jsdoc-param-type",
+      "package": "@sap/eslint-plugin-ui5-jsdocs",
+      "url": "https://www.npmjs.com/package/@sap/eslint-plugin-ui5-jsdocs",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui5-jsdocs/duplicate-jsdoc-params",
+      "package": "@sap/eslint-plugin-ui5-jsdocs",
+      "url": "https://www.npmjs.com/package/@sap/eslint-plugin-ui5-jsdocs",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui5-jsdocs/no-jsdoc",
+      "package": "@sap/eslint-plugin-ui5-jsdocs",
+      "url": "https://www.npmjs.com/package/@sap/eslint-plugin-ui5-jsdocs",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui5-jsdocs/no-jsdoc-param",
+      "package": "@sap/eslint-plugin-ui5-jsdocs",
+      "url": "https://www.npmjs.com/package/@sap/eslint-plugin-ui5-jsdocs",
+      "description": null,
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "ui5/hungarian-notation",
+      "package": "eslint-plugin-ui5",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ui5#rules",
+      "description": "Use hungarian notation when declaring variables",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Stylistic Issues"
+    },
+    {
+      "id": "ui5/no-boolean-literal-compare",
+      "package": "eslint-plugin-ui5",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ui5#rules",
+      "description": "No comparison against boolean literals",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "ui5/no-for-in",
+      "package": "eslint-plugin-ui5",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ui5#rules",
+      "description": "No usage of for...in loops",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "ui5/no-global-id",
+      "package": "eslint-plugin-ui5",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ui5#rules",
+      "description": "Checks if controls are accessed using their global ID",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Possible Errors"
+    },
+    {
+      "id": "ui5/no-global-name",
+      "package": "eslint-plugin-ui5",
+      "url": "https://www.npmjs.com/package/eslint-plugin-ui5#rules",
+      "description": "Don't use references to global names",
+      "deprecated": false,
+      "type": null,
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": "Best Practices"
     },
     {
       "id": "unicode-bom",
@@ -36169,6 +39491,61 @@
       "category": null
     },
     {
+      "id": "use-macros/graphql-tag",
+      "package": "eslint-plugin-use-macros",
+      "url": "https://www.npmjs.com/package/eslint-plugin-use-macros#rules",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "use-macros/styled-components",
+      "package": "eslint-plugin-use-macros",
+      "url": "https://www.npmjs.com/package/eslint-plugin-use-macros#rules",
+      "description": null,
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "use-no-memo/material-react-table",
+      "package": "eslint-plugin-use-no-memo",
+      "url": "https://www.npmjs.com/package/eslint-plugin-use-no-memo#rules",
+      "description": "Require 'use no memo' directive when using useMaterialReactTable from material-react-table",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "use-no-memo/react-hook-form",
+      "package": "eslint-plugin-use-no-memo",
+      "url": "https://www.npmjs.com/package/eslint-plugin-use-no-memo#rules",
+      "description": "Require 'use no memo' directive when using useForm from react-hook-form",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "use-no-memo/tanstack-table",
+      "package": "eslint-plugin-use-no-memo",
+      "url": "https://www.npmjs.com/package/eslint-plugin-use-no-memo#rules",
+      "description": "Require 'use no memo' directive when using useReactTable from @tanstack/react-table",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
       "id": "valid-typeof",
       "package": "eslint",
       "url": "https://eslint.org/docs/latest/rules/valid-typeof",
@@ -36783,6 +40160,61 @@
       "fixable": "code",
       "hasSuggestions": false,
       "category": null
+    },
+    {
+      "id": "vtex/consistent-props-type",
+      "package": "eslint-plugin-vtex",
+      "url": "https://github.com/vtex/typescript/tree/main/packages/eslint-plugin-vtex/docs/rules/consistent-props-type.md",
+      "description": "Consistent way to define props type",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "vtex/prefer-early-return",
+      "package": "eslint-plugin-vtex",
+      "url": "https://github.com/vtex/typescript/tree/main/packages/eslint-plugin-vtex/docs/rules/prefer-early-return.md",
+      "description": "Prefer early returns over full-body conditional wrapping in function declarations.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "vtex/prefer-use-effect-named-callback",
+      "package": "eslint-plugin-vtex",
+      "url": "https://github.com/vtex/typescript/tree/main/packages/eslint-plugin-vtex/docs/rules/prefer-use-effect-named-callback.md",
+      "description": "Prefer useEffect with named function or constant callbacks.",
+      "deprecated": false,
+      "type": "layout",
+      "fixable": null,
+      "hasSuggestions": false,
+      "category": null
+    },
+    {
+      "id": "vue-data-testid/event-attribute",
+      "package": "eslint-plugin-vue-data-testid",
+      "url": "https://www.npmjs.com/package/eslint-plugin-vue-data-testid#rules",
+      "description": "Ensure a data-test-id attribute is present on elements with Vue.js DOM events",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "recommended"
+    },
+    {
+      "id": "vue-data-testid/tag-element",
+      "package": "eslint-plugin-vue-data-testid",
+      "url": "https://www.npmjs.com/package/eslint-plugin-vue-data-testid#rules",
+      "description": "Enforce a custom data-testid attribute on testable Vue.js components",
+      "deprecated": false,
+      "type": null,
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "recommended"
     },
     {
       "id": "vue-i18n/key-format-style",
@@ -41438,5 +44870,5 @@
       "category": null
     }
   ],
-  "pluginCount": 152
+  "pluginCount": 228
 }
