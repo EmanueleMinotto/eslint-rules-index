@@ -73,7 +73,14 @@ const pluginPackages = Object.keys(deps || {}).filter((name) => {
 });
 
 // Plugins that throw when loaded (e.g. missing peer deps); add back here if you reinstall them
-const SKIP_PLUGINS = new Set([]);
+const SKIP_PLUGINS = new Set([
+  // Requires an Obsidian `manifest.json` in the current working directory.
+  "eslint-plugin-obsidianmd",
+  // Depends on native `deasync` bindings which are not present in all environments.
+  "eslint-plugin-postcss-modules",
+  // Throws when accessing `.rules` unless RULES_DIR is configured.
+  "eslint-plugin-rulesdir",
+]);
 
 function readPluginPackageJson(pluginPath) {
   const pkgJsonPath = path.join(pluginPath, "package.json");
@@ -124,7 +131,16 @@ for (const packageName of pluginPackages) {
     continue;
   }
 
-  const pluginRules = plugin?.rules || plugin?.default?.rules;
+  let pluginRules;
+  try {
+    pluginRules = plugin?.rules || plugin?.default?.rules;
+  } catch (err) {
+    console.warn(
+      `Plugin ${packageName} threw when accessing .rules, skipping.`,
+      err.message
+    );
+    continue;
+  }
   if (!pluginRules || typeof pluginRules !== "object") {
     console.warn(`Plugin ${packageName} has no .rules object, skipping.`);
     continue;
