@@ -1,3 +1,4 @@
+/* eslint-disable max-lines -- build script, single file preferred */
 /**
  * Builds a JSON file with all ESLint rules:
  * - Core rules from the `eslint` package

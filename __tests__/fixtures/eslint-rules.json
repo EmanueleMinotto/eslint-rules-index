@@ -1,0 +1,38 @@
+{
+  "rules": [
+    {
+      "id": "no-unused-vars",
+      "package": "eslint",
+      "url": "https://eslint.org/docs/rules/no-unused-vars",
+      "description": "Disallow unused variables",
+      "deprecated": false,
+      "type": "problem",
+      "fixable": null,
+      "hasSuggestions": true,
+      "category": "Variables"
+    },
+    {
+      "id": "eqeqeq",
+      "package": "eslint",
+      "url": "https://eslint.org/docs/rules/eqeqeq",
+      "description": "Require the use of === and !==",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Best Practices"
+    },
+    {
+      "id": "import/no-duplicates",
+      "package": "eslint-plugin-import",
+      "url": "https://github.com/import-js/eslint-plugin-import",
+      "description": "Prefer a single import statement per module",
+      "deprecated": false,
+      "type": "suggestion",
+      "fixable": "code",
+      "hasSuggestions": false,
+      "category": "Style"
+    }
+  ],
+  "pluginCount": 1
+}
