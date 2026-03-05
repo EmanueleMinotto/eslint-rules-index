@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
                 "error",
                 { max: 150, skipBlankLines: true, skipComments: true },
             ],
+            "max-depth": ["error", { max: 3 }],
         },
     },
     // Override default ignores of eslint-config-next.

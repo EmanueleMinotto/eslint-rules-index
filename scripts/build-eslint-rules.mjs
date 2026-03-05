@@ -75,6 +75,41 @@ const pluginPackages = Object.keys(deps || {}).filter((name) => {
 // Plugins that throw when loaded (e.g. missing peer deps); add back here if you reinstall them
 const SKIP_PLUGINS = new Set([]);
 
+function readPluginPackageJson(pluginPath) {
+  const pkgJsonPath = path.join(pluginPath, "package.json");
+  return JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));
+}
+
+function resolvePluginEntryPath(packageName, pluginPath, pluginPkg) {
+  try {
+    return require.resolve(packageName);
+  } catch {
+    const entry = pluginPkg.main || pluginPkg.module || "index.js";
+    return path.join(pluginPath, entry);
+  }
+}
+
+async function loadPluginModule(packageName, pluginPath) {
+  try {
+    const pluginPkg = readPluginPackageJson(pluginPath);
+    const entryPath = resolvePluginEntryPath(
+      packageName,
+      pluginPath,
+      pluginPkg
+    );
+    const isEsm =
+      pluginPkg.type === "module" || entryPath.endsWith(".mjs");
+    if (isEsm) {
+      const mod = await import(pathToFileURL(entryPath).href);
+      return mod.default ?? mod;
+    }
+    return require(entryPath);
+  } catch (err) {
+    console.warn(`Could not load plugin ${packageName}:`, err.message);
+    return null;
+  }
+}
+
 // ---- Load rules from each plugin (supports both CJS and ESM) ----
 for (const packageName of pluginPackages) {
   if (SKIP_PLUGINS.has(packageName)) {
@@ -84,64 +119,41 @@ for (const packageName of pluginPackages) {
   const pluginPath = path.join(NODE_MODULES, packageName);
   if (!fs.existsSync(pluginPath)) continue;
 
-  try {
-    let plugin;
-    try {
-      const pkgJsonPath = path.join(pluginPath, "package.json");
-      const pluginPkg = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));
-      let entryPath;
-      try {
-        entryPath = require.resolve(packageName);
-      } catch {
-        const entry = pluginPkg.main || pluginPkg.module || "index.js";
-        entryPath = path.join(pluginPath, entry);
-      }
-      const isEsm =
-        pluginPkg.type === "module" || entryPath.endsWith(".mjs");
-      if (isEsm) {
-        const mod = await import(pathToFileURL(entryPath).href);
-        plugin = mod.default ?? mod;
-      } else {
-        plugin = require(entryPath);
-      }
-    } catch (err) {
-      console.warn(`Could not load plugin ${packageName}:`, err.message);
-      continue;
-    }
+  const plugin = await loadPluginModule(packageName, pluginPath);
+  if (!plugin) {
+    continue;
+  }
 
-    const pluginRules = plugin?.rules || plugin?.default?.rules;
-    if (!pluginRules || typeof pluginRules !== "object") {
-      console.warn(`Plugin ${packageName} has no .rules object, skipping.`);
-      continue;
-    }
+  const pluginRules = plugin?.rules || plugin?.default?.rules;
+  if (!pluginRules || typeof pluginRules !== "object") {
+    console.warn(`Plugin ${packageName} has no .rules object, skipping.`);
+    continue;
+  }
 
-    const prefix = getPluginPrefix(packageName);
-    for (const [ruleName, ruleValue] of Object.entries(pluginRules)) {
-      const rule =
-        typeof ruleValue === "function"
-          ? ruleValue
-          : ruleValue?.default ?? ruleValue;
-      const fullId = `${prefix}/${ruleName}`;
-      const url =
-        rule?.meta?.docs?.url ||
-        (packageName.startsWith("@")
-          ? `https://www.npmjs.com/package/${packageName}`
-          : `https://www.npmjs.com/package/${packageName}#rules`);
-      const { type, fixable, hasSuggestions, category } = ruleMeta(rule);
-      rules.push({
-        id: fullId,
-        package: packageName,
-        url,
-        description: rule?.meta?.docs?.description || null,
-        deprecated: !!rule?.meta?.deprecated,
-        type,
-        fixable,
-        hasSuggestions,
-        category,
-      });
-    }
-  } catch (err) {
-    console.warn(`Error processing plugin ${packageName}:`, err.message);
+  const prefix = getPluginPrefix(packageName);
+  for (const [ruleName, ruleValue] of Object.entries(pluginRules)) {
+    const rule =
+      typeof ruleValue === "function"
+        ? ruleValue
+        : ruleValue?.default ?? ruleValue;
+    const fullId = `${prefix}/${ruleName}`;
+    const url =
+      rule?.meta?.docs?.url ||
+      (packageName.startsWith("@")
+        ? `https://www.npmjs.com/package/${packageName}`
+        : `https://www.npmjs.com/package/${packageName}#rules`);
+    const { type, fixable, hasSuggestions, category } = ruleMeta(rule);
+    rules.push({
+      id: fullId,
+      package: packageName,
+      url,
+      description: rule?.meta?.docs?.description || null,
+      deprecated: !!rule?.meta?.deprecated,
+      type,
+      fixable,
+      hasSuggestions,
+      category,
+    });
   }
 }
 
