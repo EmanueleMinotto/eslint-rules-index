@@ -1,6 +1,6 @@
 import rulesData from "@/data/eslint-rules.json";
 
-export type EslintRule = {
+type RawEslintRule = {
     id: string;
     package: string;
     url: string;
@@ -12,11 +12,24 @@ export type EslintRule = {
     category?: string | null;
 };
 
-type RulesPayload = { rules: EslintRule[]; pluginCount?: number };
-const payload = rulesData as unknown as EslintRule[] | RulesPayload;
-const isLegacyFormat = Array.isArray(payload);
+export type EslintRule = RawEslintRule & {
+    /**
+     * Internal unique identifier used for React table row keys.
+     * Some rule IDs can appear in multiple packages, so this
+     * guarantees a stable, unique key per record.
+     */
+    uniqueId: string;
+};
 
-export const rules: EslintRule[] = isLegacyFormat ? payload : payload.rules;
+type RulesPayload = { rules: RawEslintRule[]; pluginCount?: number };
+const payload = rulesData as unknown as RawEslintRule[] | RulesPayload;
+const isLegacyFormat = Array.isArray(payload);
+const rawRules: RawEslintRule[] = isLegacyFormat ? payload : payload.rules;
+
+export const rules: EslintRule[] = rawRules.map((rule, index) => ({
+    ...rule,
+    uniqueId: `${rule.id}__${rule.package}__${index}`,
+}));
 export const pluginCount: number | undefined = isLegacyFormat
     ? undefined
     : payload.pluginCount;

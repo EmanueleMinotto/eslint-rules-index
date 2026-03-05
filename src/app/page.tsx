@@ -96,7 +96,7 @@ function HomePage() {
                     highlightOnHover
                     records={paginatedRecords}
                     columns={columns}
-                    idAccessor="id"
+                    idAccessor="uniqueId"
                     minHeight={400}
                     page={page}
                     onPageChange={setPage}
