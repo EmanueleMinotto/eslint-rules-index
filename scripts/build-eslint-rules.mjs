@@ -10,6 +10,7 @@ import { createRequire } from "module";
 import fs from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
+import { execSync } from "child_process";
 
 const require = createRequire(import.meta.url);
 const { builtinRules } = require("eslint/use-at-your-own-risk");
@@ -55,22 +56,17 @@ function getPluginPrefix(packageName) {
 }
 
 // ---- Discover eslint-plugin-* in dependencies ----
-const pkgPath = path.join(PROJECT_ROOT, "package.json");
-const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
-const deps = { ...pkg.dependencies, ...pkg.devDependencies };
-const pluginPackages = Object.keys(deps || {}).filter((name) => {
-  if (
-    name.startsWith("eslint-plugin-") ||
-    /^@[^/]+\/eslint-plugin-.+$/.test(name)
-  ) {
-    return true;
-  }
-  // Explicitly include scoped plugins that don't follow the eslint-plugin-* naming
-  // but are ESLint plugins discovered via npm search.
-  if (name === "@eslint-performance/plugin-runtime-complexity") {
-    return true;
-  }
-  return false;
+const pluginsTxtPath = path.join(PROJECT_ROOT, "eslint-plugins.txt");
+const pluginLines = fs.readFileSync(pluginsTxtPath, "utf8").split("\n").filter(Boolean);
+
+console.log("Installing plugins dynamically...");
+execSync(`npm install --no-save --no-audit --no-fund --ignore-scripts --legacy-peer-deps ${pluginLines.join(" ")}`, {
+  stdio: "inherit",
+});
+
+const pluginPackages = pluginLines.map((line) => {
+  const match = line.match(/^(@[^/]+\/[^@]+|[^@]+)/);
+  return match ? match[1] : line;
 });
 
 // Plugins that throw when loaded (e.g. missing peer deps); add back here if you reinstall them
