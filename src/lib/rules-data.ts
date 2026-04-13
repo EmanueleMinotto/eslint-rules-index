@@ -34,7 +34,7 @@ export const pluginCount: number | undefined = isLegacyFormat
     ? undefined
     : payload.pluginCount;
 
-export const PAGE_SIZE = 25;
+export const PAGE_SIZE = 24;
 
 export type SortDirection = "asc" | "desc";
 

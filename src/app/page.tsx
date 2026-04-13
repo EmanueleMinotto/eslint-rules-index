@@ -1,144 +1,116 @@
 "use client";
 
 import { useState, useMemo, useEffect, Suspense } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { Box, Container } from "@mantine/core";
-import { DataTable } from "mantine-datatable";
-import { RulesIndexHeader } from "@/components/RulesIndexHeader";
-import { RulesTableEmptyState } from "@/components/RulesTableEmptyState";
+import { useSearchParams } from "next/navigation";
+import { AppShell, SimpleGrid, Pagination, Stack, Text, SegmentedControl, Group, Title, Box } from "@mantine/core";
+import { Header } from "@/components/Header";
+import { RuleCard } from "@/components/RuleCard";
 import { PageFooter } from "@/components/PageFooter";
-import { useRulesTableColumns } from "@/app/page/useRulesTableColumns";
 import { HomeFallback } from "@/app/page/HomeFallback";
-import {
-    rules,
-    pluginCount,
-    PAGE_SIZE,
-    sortRules,
-    filterBySearch,
-} from "@/lib/rules-data";
+import { rules, pluginCount, PAGE_SIZE, sortRules, filterBySearch } from "@/lib/rules-data";
 
 function HomePage() {
-    const router = useRouter();
-    const pathname = usePathname();
     const searchParams = useSearchParams();
     const qFromUrl = searchParams.get("q") ?? "";
 
     const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState(PAGE_SIZE);
     const [search, setSearch] = useState("");
-    const [typeFilter, setTypeFilter] = useState<string | null>(null);
-    const [fixableFilter, setFixableFilter] = useState<string | null>(null);
-    const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-    const [packageFilter, setPackageFilter] = useState<string | null>(null);
-    const [sortStatus, setSortStatus] = useState({
-        columnAccessor: "id",
-        direction: "asc" as "asc" | "desc",
-    });
+    const [filterCategory, setFilterCategory] = useState<string>("All");
+    const [pageSize] = useState(PAGE_SIZE);
 
     useEffect(() => {
         setSearch(qFromUrl);
+        setPage(1);
     }, [qFromUrl]);
-
-    const columns = useRulesTableColumns({
-        typeFilter,
-        setTypeFilter,
-        fixableFilter,
-        setFixableFilter,
-        categoryFilter,
-        setCategoryFilter,
-        packageFilter,
-        setPackageFilter,
-        setPage,
-    });
 
     const filteredRules = useMemo(() => {
         let list = filterBySearch(rules, search);
-        if (typeFilter) list = list.filter((r) => (r.type ?? null) === typeFilter);
-        if (fixableFilter) {
-            if (fixableFilter === "none") list = list.filter((r) => !(r.fixable ?? null));
-            else list = list.filter((r) => (r.fixable ?? null) === fixableFilter);
+        
+        if (filterCategory === "Fixable") {
+            list = list.filter((r) => !!r.fixable);
+        } else if (filterCategory === "Deprecated") {
+            list = list.filter((r) => r.deprecated);
         }
-        if (categoryFilter) list = list.filter((r) => (r.category ?? null) === categoryFilter);
-        if (packageFilter) list = list.filter((r) => (r.package ?? null) === packageFilter);
+
         return list;
-    }, [search, typeFilter, fixableFilter, categoryFilter, packageFilter]);
+    }, [search, filterCategory]);
 
-    const sortedRules = useMemo(
-        () => sortRules(filteredRules, sortStatus.columnAccessor, sortStatus.direction),
-        [filteredRules, sortStatus.columnAccessor, sortStatus.direction],
-    );
+    const sortedRules = useMemo(() => {
+        return sortRules(filteredRules, "id", "asc");
+    }, [filteredRules]);
 
-    const paginatedRecords = useMemo(
-        () => sortedRules.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize),
-        [sortedRules, page, pageSize],
-    );
+    const paginatedRules = useMemo(() => {
+        return sortedRules.slice((page - 1) * pageSize, page * pageSize);
+    }, [sortedRules, page, pageSize]);
+
+    const totalPages = Math.ceil(sortedRules.length / pageSize);
 
     return (
-        <Box component="main" py="xl">
-            <Container size="xl">
-                <RulesIndexHeader
-                    rulesLength={rules.length}
-                    pluginCount={pluginCount}
-                    search={search}
-                    onSearchChange={(value) => {
-                        setSearch(value);
-                        setPage(1);
-                        const url = value.trim()
-                            ? `${pathname}?q=${encodeURIComponent(value)}`
-                            : pathname;
-                        router.replace(url, { scroll: false });
-                    }}
-                />
-                <DataTable
-                    withTableBorder
-                    borderRadius="sm"
-                    striped
-                    highlightOnHover
-                    records={paginatedRecords}
-                    columns={columns}
-                    idAccessor="uniqueId"
-                    minHeight={400}
-                    page={page}
-                    onPageChange={setPage}
-                    totalRecords={sortedRules.length}
-                    sortStatus={sortStatus}
-                    onSortStatusChange={(status) => {
-                        setSortStatus(status);
-                        setPage(1);
-                    }}
-                    recordsPerPage={pageSize}
-                    onRecordsPerPageChange={(size) => {
-                        setPageSize(size);
-                        setPage(1);
-                    }}
-                    recordsPerPageOptions={[10, 25, 50, 100]}
-                    recordsPerPageLabel="Rows per page:"
-                    paginationWithEdges
-                    paginationWithControls
-                    paginationActiveBackgroundColor="var(--mantine-primary-color-filled)"
-                    paginationSize="sm"
-                    paginationText={({ from, to, totalRecords }) =>
-                        totalRecords > 0 ? `${from}–${to} of ${totalRecords} rules` : null
-                    }
-                    noRecordsText={
-                        sortedRules.length === 0 && search.trim()
-                            ? "No rules match your search. Try a different query."
-                            : sortedRules.length === 0
-                              ? "No rules loaded."
-                              : undefined
-                    }
-                    emptyState={
-                        sortedRules.length === 0 ? (
-                            <RulesTableEmptyState
-                                hasActiveSearch={search.trim().length > 0}
-                            />
-                        ) : undefined
-                    }
-                    className="rules-table-wrapper"
-                />
-            </Container>
-            <PageFooter />
-        </Box>
+        <AppShell
+            header={{ height: 60 }}
+            padding="md"
+        >
+            <AppShell.Header>
+                <Header pluginCount={pluginCount} rulesLength={rules.length} />
+            </AppShell.Header>
+
+            <AppShell.Main>
+                <Stack gap="lg" maw={1200} mx="auto" w="100%" mih="80vh">
+                    <Group justify="space-between" align="center" mt="md">
+                        <div>
+                            <Title order={2} size="h3">Rules Directory</Title>
+                            <Text c="dimmed" size="sm">
+                                {sortedRules.length} {sortedRules.length === 1 ? 'rule' : 'rules'} found
+                            </Text>
+                        </div>
+                        
+                        <SegmentedControl
+                            value={filterCategory}
+                            onChange={(val) => {
+                                setFilterCategory(val);
+                                setPage(1);
+                            }}
+                            data={[
+                                { label: 'All', value: 'All' },
+                                { label: 'Fixable', value: 'Fixable' },
+                                { label: 'Deprecated', value: 'Deprecated' },
+                            ]}
+                        />
+                    </Group>
+
+                    {sortedRules.length === 0 ? (
+                        <Stack align="center" mt="xl" py="xl" gap="md" style={{ flexGrow: 1 }}>
+                            <Text size="lg" fw={500}>No rules found</Text>
+                            <Text c="dimmed">Try adjusting your search query or filters.</Text>
+                        </Stack>
+                    ) : (
+                        <Box style={{ flexGrow: 1 }}>
+                            <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="md">
+                                {paginatedRules.map((rule) => (
+                                    <RuleCard key={rule.uniqueId} rule={rule} />
+                                ))}
+                            </SimpleGrid>
+
+                            {totalPages > 1 && (
+                                <Group justify="center" mt="xl" py="md">
+                                    <Pagination
+                                        total={totalPages}
+                                        value={page}
+                                        onChange={setPage}
+                                        color="indigo"
+                                        withEdges
+                                        siblings={1}
+                                    />
+                                </Group>
+                            )}
+                        </Box>
+                    )}
+                </Stack>
+                <Box maw={1200} mx="auto" pt="xl">
+                    <PageFooter />
+                </Box>
+            </AppShell.Main>
+        </AppShell>
     );
 }
 
