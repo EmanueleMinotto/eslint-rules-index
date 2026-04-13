@@ -3,11 +3,9 @@
 import { Group, Title, ActionIcon, useMantineColorScheme, TextInput } from "@mantine/core";
 import { IconSun, IconMoon, IconSearch } from "@tabler/icons-react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
-export function Header({ pluginCount, rulesLength }: { pluginCount?: number; rulesLength: number }) {
-    const { toggleColorScheme } = useMantineColorScheme();
-    
+function HeaderSearch({ rulesLength }: { rulesLength: number }) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -28,19 +26,29 @@ export function Header({ pluginCount, rulesLength }: { pluginCount?: number; rul
     };
 
     return (
+        <TextInput
+            placeholder={`Search among ${rulesLength} rules...`}
+            value={searchValue}
+            onChange={(event) => handleSearchChange(event.currentTarget.value)}
+            leftSection={<IconSearch size={16} />}
+            w="100%"
+        />
+    );
+}
+
+export function Header({ pluginCount, rulesLength }: { pluginCount?: number; rulesLength: number }) {
+    const { toggleColorScheme } = useMantineColorScheme();
+
+    return (
         <Group h="100%" px="md" justify="space-between">
             <Group>
                 <Title order={3}>ESLint Rules Index</Title>
             </Group>
 
             <Group flex={1} justify="center" maw={500} ml="xl" mr="xl">
-                <TextInput
-                    placeholder={`Search among ${rulesLength} rules...`}
-                    value={searchValue}
-                    onChange={(event) => handleSearchChange(event.currentTarget.value)}
-                    leftSection={<IconSearch size={16} />}
-                    w="100%"
-                />
+                <Suspense fallback={<TextInput placeholder={`Search among ${rulesLength} rules...`} leftSection={<IconSearch size={16} />} w="100%" />}>
+                    <HeaderSearch rulesLength={rulesLength} />
+                </Suspense>
             </Group>
 
             <Group>
